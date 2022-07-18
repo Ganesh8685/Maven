@@ -14,7 +14,7 @@ node() {
     }
     stage('Continuous Delivery') {
         input message: 'waiting for the Delivery Manager Approval', submitter: 'john'
-        deploy adapters: [tomcat9(credentialsId: '9c9442cd-9914-45e0-af4c-943b0b573b2d', path: '', url: 'http://172.31.88.97:8080')], contextPath: 'prodapp', war: '**/*.war'
+        deploy adapters: [tomcat9(credentialsId: '9c9442cd-9914-45e0-af4c-943b0b573b2d', path: '', url: 'http://172.31.94.70:8080')], contextPath: 'prodapp', war: '**/*.war'
     }
     
 }
