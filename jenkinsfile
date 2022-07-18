@@ -9,7 +9,7 @@ node() {
         deploy adapters: [tomcat9(credentialsId: '9c9442cd-9914-45e0-af4c-943b0b573b2d', path: '', url: 'http://172.31.88.97:8080')], contextPath: 'testapp', war: '**/*.war'     
     }
     stage('Continuous Testing') {
-        git branch: 'main', url: 'https://github.com/Ganesh8685/TestScripts22.git'
+        git branch: 'main', url: 'https://github.com/Ganesh8685/TestScript.git'
         sh 'java -jar /var/lib/jenkins/workspace/scriptedpipeline/testing.jar'
     }
     stage('Continuous Delivery') {
